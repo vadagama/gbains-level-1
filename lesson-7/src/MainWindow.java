@@ -18,7 +18,6 @@ public class MainWindow extends JFrame {
         setLocation(X_WINDOW, Y_WINDOW);
         setSize(WIDTH_WINDOW, HEIGHT_WINDOW);
 
-
         JButton startButton = new JButton("Start");
         JButton exitButton = new JButton("Exit");
 
@@ -47,6 +46,9 @@ public class MainWindow extends JFrame {
         settings = new Settings(this);
 
         setVisible(true);
+    }
 
+    void start(int gameMode, int fieldSizeX, int fieldSizeY, int winLength) {
+        field.startNewGame(gameMode, fieldSizeX, fieldSizeY, winLength);
     }
 }
